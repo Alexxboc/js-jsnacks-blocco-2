@@ -10,12 +10,27 @@ const names = ['alessandro','gioele','santiago','antonella'];
 // Creo una lista di cognomi
 const lastNames = ['boccardi', 'riccio','del piero','chiellini'];
 
-// Creo una variabile per il nome casuale
-let randomName = Math.floor(Math.random() * names.length);
-// console.log(randomName)
+// Creo una lista per i cogmoni random
+const randomList = []
 
-// Creo una variabile per il cognome casuale
-let randomLastName = Math.floor(Math.random() * lastNames.length);
-// console.log(randomName)
+let randomName;
+let randomLastName;
 
-console.log(`${names[randomName]} ${lastNames[randomLastName]} può partecipare alla festa`);
+for(let i = 0; i < names.length; i++){
+    // Creo una variabile per il nome casuale
+    randomName = names[Math.floor(Math.random() * names.length)]; 
+    // console.log(randomName)
+
+    // Creo una variabile per il cognome casuale
+    randomLastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+    // console.log(randomName)
+    
+    randomList.push(`${randomName} ${randomLastName}`)
+    
+}
+
+    
+    console.log(randomList);
+
+  
+// console.log(`${names[randomName]} ${lastNames[randomLastName]} può partecipare alla festa`);
